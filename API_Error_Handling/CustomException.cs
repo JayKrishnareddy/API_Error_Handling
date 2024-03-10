@@ -14,16 +14,16 @@
                 RequestedSalary = requestedSalary;
             }
         }
-        //public class EmployeeNotFoundException : Exception
-        //{
-        //    public int RequestedEmployeeId { get; private set; }
+        public class EmployeeNotFoundException : Exception
+        {
+            public int RequestedEmployeeId { get; private set; }
 
-        //    public EmployeeNotFoundException(int employeeId)
-        //        : base($"Employee with ID {employeeId} not found.")
-        //    {
-        //        RequestedEmployeeId = employeeId;
-        //    }
-        //}
+            public EmployeeNotFoundException(int employeeId)
+                : base($"Employee with ID {employeeId} not found.")
+            {
+                RequestedEmployeeId = employeeId;
+            }
+        }
 
         public void UpdateEmployeeSalary(int employeeId, decimal newSalary)
         {
